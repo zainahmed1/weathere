@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>tiles</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="icon"
+      href="https://img.pngio.com/weather-png-hd-weather-png-transparent-480_480.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cabin&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="my-cont">
+        <div class="search-box">
+          <input class="search-text" type="text" placeholder="Search Weather" />
+          <a class="search-btn" href="#" onclick="getWeather()">
+            <i class="fas fa-search"> </i>
+          </a>
+        </div>
+
+    
+
+        <div class="h1">
+          <h1 style="color: black "></h1>
+          <div id="details">
+            <section class="details">
+              <div id="city"></div>
+              <div id="main"></div>
+              <div id="temp"></div>
+              <div id="humidity"></div>
+              <div id="windspeed"></div>
+              <div class="weather-icon"></div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div id="animation-container"></div>
+
+      <div id="cloudy-weather">
+        <div class="cloud"></div>
+      </div>
+
+      <div id="rainy-weather">
+        <div class="rain"></div>
+      </div>
+
+      <div id="snow-weather">
+        <section>
+          <div class="snow1"></div>
+          <div class="snow2"></div>
+          <div class="snow3"></div>
+        </section>
+      </div>
+
+      <div id="partly-cloudy-weather">
+        <div class="center">
+          <div class="clab"></div>
+          <ul class="sun">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="sunny-weather">
+        <div class="sunnny-container">
+          <span class="sun sunshine"></span>
+          <span class="sunny"></span>
+        </div>
+      </div>
+
+      <div id="fog-weather">
+        <section class="fog">
+          <div class="fog container">
+            <div class="fog-img fog-img-first"></div>
+            <div class="fog-img fog-img-second"></div>
+          </div>
+        </section>
+      </div>
+
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("span").mouseover(function() {
+          console.log(this);
+          $(this).animate(
+            {
+              opacity: 0,
+              top: 1000
+            },
+            1000,
+            function() {
+              // Animation complete.
+            }
+          );
+        });
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
